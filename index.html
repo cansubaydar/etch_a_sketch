@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;1,600&family=Corinthia:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/db70e90eac.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="sketch__container">
+        <div class="sketch__header">
+            <span>MAGIC</span>
+            <h1>Etch A Sketch</h1>
+            <span>SCREEN</span>
+        </div>
+        
+        <div class="sketch__frame">
+            <div class="sketch__canvas">
+                <canvas id="canvas" width="1200" height="800"></canvas>
+            </div>
+        </div>
+
+        <div class="sketch__dials">
+            <div class="sketch__btn horizontal__dial">
+                <a href="#" data-selection="left" class="chevron ChevronLeft"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" data-selection="right" class="chevron ChevronRight"><i class="fas fa-chevron-right"></i></a>
+                <div class="dial"></div>
+            </div>
+                
+            <div class="sketch__btn vertical__dial">
+                <a href="#" data-selection="up" class="chevron ChevronUp"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" data-selection="down" class="chevron ChevronDown"><i class="fas fa-chevron-right"></i></a>
+                <div class="dial"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="selection">
+        <div class="penColour">
+            <label for="colour">Pen Colour:</label>
+            <select name="colour" id="colour" class="colour">
+                <option value="classic">Black</option>
+                <option value="colourful">Colourful</option>
+            </select>
+        </div>
+        <div class="erase">
+            <a href="#" class="shake">Erase</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        Created by <a href="https://github.com/cansubaydar" target="_blank"><i class="fab fa-github"></i>cansubaydar</a> 
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
