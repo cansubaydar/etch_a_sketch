@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;1,600&family=Corinthia:wght@700&display=swap');
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-primary: #f8f7f7;
+    --clr-secondary: #d50011; 
+    --clr-dark-red:  #7c0020;
+    --clr-light-red: #f25259;
+    --clr-text: #fedd50;
+    --clr-dark-shadow: rgba(0, 0, 0, 0.2);
+    --clr-light-shadow: rgba(255, 255, 255, 0.3);
+    --font-primary: 'Asap', sans-serif;
+    --font-secondary: 'Corinthia', cursive;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    min-height: 100%;
+    padding-top: 4em;
+    background-color: var(--clr-dark-red);
+    font-family: var(--font-primary);
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-primary);
+}
+
+.sketch__container {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    position: relative;
+    border-radius: 0.6em;   
+    border: 1.5em solid var(--clr-secondary);
+    box-shadow: 0.3em 0.3em 0.6em var(--clr-dark-shadow), 
+                -0.2em -0.2em 0.5em var(--clr-dark-shadow);
+    background: radial-gradient(var(--clr-secondary), var(--clr-light-red), var(--clr-secondary));
+    margin-bottom: 1em;
+}
+
+.sketch__container::after {
+    content: '';
+    position: absolute;
+    top: -1.5em;
+    bottom: -1.5em;
+    left: -1.5em;
+    right: -1.5em;
+    border: 0.5em solid rgba(0, 0, 0, 0.3);
+    border-right-color: var(--clr-light-shadow);
+    border-left-color: var(--clr-light-shadow);
+    border-radius: 0.6em;
+    box-shadow: inset 0.5em 0.5em 0.75em 0 rgba(0, 0, 0, 0.15),
+                inset -0.5em -0.5em 0.75em 0 rgba(255, 255, 255, 0.15);
+}
+
+.sketch__header {
+    display: flex;
+    align-items: center;
+    color: var(--clr-text);
+    position: absolute;
+    top: -1em;
+    z-index: 200;
+}
+
+.sketch__header h1 {
+    font-size: 1.2em;
+    font-family: var(--font-secondary);
+    padding: 0 0.3em;
+}
+
+.sketch__header span {
+    font-size: 0.4em;
+    font-family: var(--font-primary);
+}
+
+.sketch__frame {
+    display: flex;
+    justify-content: center;
+    margin: 0.3em;
+    padding: 0.1em;
+    border: 0.1em solid var(--clr-secondary);
+    border-radius: 0.6em;
+    background-color: var(--clr-primary);
+    box-shadow: inset 0.1em 0.1em 0.4em rgba(0, 0, 0, 0.521), 
+                inset -0.1em -0.1em 0.4em rgba(0, 0, 0, 0.521);
+    z-index: 100;
+}
+
+.sketch__canvas {
+    width: 240px;
+    height: 160px;
+    margin: 0.2em;
+}
+
+canvas {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+.sketch__dials {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: -1.2em;
+    z-index: 99;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sketch__btn { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.7em;
+    height: 1.7em;
+    background-color: var(--clr-primary);
+    background-image: repeating-conic-gradient(var(--clr-dark-shadow) 0 3deg, transparent 3deg 6deg);
+    border-radius: 50%;
+    border: 1px solid var(--clr-primary);
+    z-index: 10;
+}
+
+.sketch__btn a {
+    margin: -0.3em 0.2em 0.1em 0.2em;
+}
+
+.horizontal__dial {
+    transform: rotate(360deg);
+    box-shadow: 0.4em -0.4em 0.65em 0 rgba(0, 0, 0, 0.3),
+                -0.525em 0.525em 0.9em rgba(0, 0, 0, 0.25),
+                0.075em -0.075em 0.03em var(--clr-primary);
+   margin-left: -1em;
+}
+
+.vertical__dial { 
+    transform: rotate(90deg);
+    box-shadow: -0.4em 0.4em 0.65em 0 rgba(0, 0, 0, 0.3),
+                0.525em -0.525em 0.9em rgba(0, 0, 0, 0.25),
+                -0.075em 0.075em 0.03em var(--clr-primary);
+    margin-right: -1em;
+}
+ 
+.dial {
+    position: absolute;
+    width: 1.2em;
+    height: 1.2em;
+    background: conic-gradient(from 180deg at 50% 50%, #fff -90.37deg, var(--clr-primary) 0.54deg, #dcdcdc 91.28deg, #fff 269.63deg, var(--clr-primary) 360.54deg);
+    box-shadow: inset -1px 1px 4px 3px #fff;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.fas {
+    color: var(--clr-dark-shadow);
+    font-size: 0.3em;
+}
+
+.selection {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 3em;
+}
+
+.penColour {
+    padding: 1em;
+    margin-right: 1em;
+}  
+
+select {
+    outline: none;
+    border: none;
+    background: transparent;
+    font: 600 0.6em var(--font-primary);
+    color: var(--clr-primary);
+    text-align: center;
+    padding: 0.2em 0;
+}
+
+option, label {
+    font: 600 0.6em var(--font-primary); 
+    color: var(--clr-text);
+}
+
+.erase {
+    display: flex;
+    justify-content: center;
+    width: min(30vw, 4em);
+    padding: 0.3em;
+    background: linear-gradient(var(--clr-secondary), var(--clr-light-red), var(--clr-secondary));
+    border: 0.2em solid var(--clr-secondary);
+    border-radius: 0.4em;
+}
+
+.erase a {
+    color: var(--clr-primary);
+    font: 600 0.6em var(--font-primary); 
+}
+
+.shake-it {
+    animation: shake 1s;  
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    20%{
+        transform: translate(5px, 5px) rotate3d(0, 0, 1, 5deg);
+    }
+    40%{
+        transform: translate(-5px, -5px) rotate3d(0, 0, 1, -5deg);
+    }
+    60% {
+        transform: translate(5px, 5px) rotate3d(0, 0, 1, 5deg);
+    }
+    80% {
+        transform: translate(-5px, -5px) rotate3d(0, 0, 1, -5deg);
+    }
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    color: var(--clr-light-red); 
+    font-size: 0.75em;
+    margin-top: auto;
+    padding: 0.5em;
+}
+
+.footer a {
+    color: var(--clr-light-red);
+}
+
+.fab {
+    color: var(--clr-light-red);
+    font-size: 1.1em;
+    padding: 0 0.2em 0 0.5em;
+}
+
+@media screen and (max-width: 48em) and (min-width: 30em) {
+    .sketch__container {
+        border-width: 3em;
+    }
+    .sketch__container::after {
+        top: -3em;
+        right: -3em;
+        bottom: -3em;
+        left: -3em;
+        border-width: 0.8em;
+    }
+    .sketch__header {
+        top: -1.8em;
+    }
+    .sketch__header h1 {
+        font-size: 1.6em;
+    }
+    .sketch__header span {
+        font-size: 0.5em;
+    }
+    .sketch__canvas {
+        width: 400px;
+        height: 267px;
+    }
+    .sketch__dials{
+        bottom: -2.6em;
+    }
+    .sketch__btn {
+        width: 3.125em;
+        height: 3.125em;
+    }
+    .sketch__btn a {
+        margin: -0.1em 0.4em 0.1em 0.4em;
+    }
+    .horizontal__dial {
+        box-shadow: 0.5em -0.5em  0.75em 0 rgba(0, 0, 0, 0.3),
+                    -0.625em 0.625em 1em rgba(0, 0, 0, 0.25),
+                    0.15em -0.15em 0.06em var(--clr-primary);
+        margin-left: -2.3em;
+    }
+    .vertical__dial {
+        box-shadow: -0.5em 0.5em 0.75em 0 rgba(0, 0, 0, 0.3),
+                    0.625em -0.625em 1em rgba(0, 0, 0, 0.25),
+                    -0.15em 0.15em 0.06em var(--clr-primary);
+        margin-right: -2.3em;
+    }
+    .dial {
+        width: 2.3em;
+        height: 2.3em;
+    }
+    .fas {
+        font-size: 0.625em;
+    }
+    select, option, label, 
+    .erase a {
+        font-size: 0.8em;
+    }
+    .erase {
+        width: min(40vw, 5em);
+    }
+    .footer {
+        font-size: 0.9em;
+        padding: 1em;
+    }
+    .fab {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .sketch__container {
+        border-width: 4.5em;
+    }
+    .sketch__container::after {
+        top: -4.5em;
+        bottom: -4.5em;
+        left: -4.5em;
+        right: -4.5em;
+        border-width: 1em;
+    }
+    .sketch__header {
+        top: -2.7em;
+    }
+    .sketch__header h1 {
+        font-size: 2.5em;
+    }
+    .sketch__header span {
+        font-size: 0.7em;
+    }
+    .sketch__canvas {
+        width: 600px;
+        height: 400px;
+    }  
+    .sketch__dials {
+        bottom: -4em;
+    }
+    .sketch__btn {
+        width: 4.55em;
+        height: 4.55em;
+    }
+    .sketch__btn a {
+        margin: 0.1em 0.6em;
+    }
+    .horizontal__dial{
+        box-shadow: 0.6em -0.6em  0.85em 0 rgba(0, 0, 0, 0.3),
+                    -0.725em 0.725em 1.1em rgba(0, 0, 0, 0.25),
+                    0.2em -0.2em 0.0625em var(--clr-primary);
+        margin-left: -3.5em;
+    }
+    .vertical__dial {
+        box-shadow: -0.6em 0.6em 0.85em 0 rgba(0, 0, 0, 0.3),
+                    0.725em -0.725em 1.1em rgba(0, 0, 0, 0.25),
+                    -0.2em 0.2em 0.0625em var(--clr-primary);
+        margin-right: -3.5em;
+    }
+    .dial {
+        width: 3.4em;
+        height: 3.4em;
+    }
+    .fas {
+        font-size: 0.8em;
+    }
+    select, option, label,
+    .erase a {
+        font-size: 0.9em;
+    }
+    .erase {
+        width: min(50vw, 6em);
+    }
+    .footer {
+        font-size: 0.975em;
+        padding: 1.5em;
+    }
+    .fab {
+        font-size: 1.5em;
+    }
+}
