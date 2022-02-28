@@ -57,10 +57,10 @@ a {
 .sketch__container::after {
     content: '';
     position: absolute;
-    top: -1.9em;
-    bottom: -1.9em;
-    left: -1.9em;
-    right: -1.9em;
+    top: -1.85em;
+    bottom: -1.85em;
+    left: -1.85em;
+    right: -1.85em;
     border: 0.5em solid rgba(0, 0, 0, 0.3);
     border-right-color: var(--clr-light-shadow);
     border-left-color: var(--clr-light-shadow);
@@ -137,7 +137,7 @@ canvas {
 }
 
 .sketch__btn a {
-    margin: -0.4em 0.2em 0.12em 0.2em;
+    margin: -0.4em 0.2em 0.1em 0.2em;
 }
 
 .horizontal__dial {
@@ -168,7 +168,7 @@ canvas {
 
 .fas {
     color: var(--clr-dark-shadow);
-    font-size: 5px;
+    font-size: 6px;
 }
 
 .selection {
