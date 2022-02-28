@@ -47,20 +47,20 @@ a {
     margin-top: auto;
     position: relative;
     border-radius: 0.6em;   
-    border: 1.5em solid var(--clr-secondary);
+    border: 1.9em solid var(--clr-secondary);
     box-shadow: 0.3em 0.3em 0.6em var(--clr-dark-shadow), 
                 -0.2em -0.2em 0.5em var(--clr-dark-shadow);
     background: radial-gradient(var(--clr-secondary), var(--clr-light-red), var(--clr-secondary));
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .sketch__container::after {
     content: '';
     position: absolute;
-    top: -1.5em;
-    bottom: -1.5em;
-    left: -1.5em;
-    right: -1.5em;
+    top: -1.9em;
+    bottom: -1.9em;
+    left: -1.9em;
+    right: -1.9em;
     border: 0.5em solid rgba(0, 0, 0, 0.3);
     border-right-color: var(--clr-light-shadow);
     border-left-color: var(--clr-light-shadow);
@@ -74,7 +74,7 @@ a {
     align-items: center;
     color: var(--clr-text);
     position: absolute;
-    top: -1em;
+    top: -1.1em;
     z-index: 200;
 }
 
@@ -85,20 +85,20 @@ a {
 }
 
 .sketch__header span {
-    font-size: 0.4em;
+    font-size: 6px;
     font-family: var(--font-primary);
 }
 
 .sketch__frame {
     display: flex;
     justify-content: center;
-    margin: 0.3em;
+    margin: 0.1em;
     padding: 0.1em;
     border: 0.1em solid var(--clr-secondary);
     border-radius: 0.6em;
     background-color: var(--clr-primary);
-    box-shadow: inset 0.1em 0.1em 0.4em rgba(0, 0, 0, 0.521), 
-                inset -0.1em -0.1em 0.4em rgba(0, 0, 0, 0.521);
+    box-shadow: inset 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.45), 
+                inset -0.1em -0.1em 0.2em rgba(0, 0, 0, 0.45);
     z-index: 100;
 }
 
@@ -118,8 +118,7 @@ canvas {
     width: 100%;
     display: flex;
     position: absolute;
-    bottom: -1.2em;
-    z-index: 99;
+    bottom: -1.5em;
     justify-content: space-between;
     align-items: center;
 }
@@ -128,39 +127,39 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1.7em;
-    height: 1.7em;
+    width: 2em;
+    height: 2em;
     background-color: var(--clr-primary);
     background-image: repeating-conic-gradient(var(--clr-dark-shadow) 0 3deg, transparent 3deg 6deg);
     border-radius: 50%;
     border: 1px solid var(--clr-primary);
-    z-index: 10;
+    z-index: 100;
 }
 
 .sketch__btn a {
-    margin: -0.3em 0.2em 0.1em 0.2em;
+    margin: -0.4em 0.2em 0.12em 0.2em;
 }
 
 .horizontal__dial {
     transform: rotate(360deg);
     box-shadow: 0.4em -0.4em 0.65em 0 rgba(0, 0, 0, 0.3),
                 -0.525em 0.525em 0.9em rgba(0, 0, 0, 0.25),
-                0.075em -0.075em 0.03em var(--clr-primary);
-   margin-left: -1em;
+                0.073em -0.073em 0.03em var(--clr-primary);
+   margin-left: -1.5em;
 }
 
 .vertical__dial { 
     transform: rotate(90deg);
     box-shadow: -0.4em 0.4em 0.65em 0 rgba(0, 0, 0, 0.3),
                 0.525em -0.525em 0.9em rgba(0, 0, 0, 0.25),
-                -0.075em 0.075em 0.03em var(--clr-primary);
-    margin-right: -1em;
+                -0.073em 0.073em 0.03em var(--clr-primary);
+    margin-right: -1.5em;
 }
  
 .dial {
     position: absolute;
-    width: 1.2em;
-    height: 1.2em;
+    width: 1.5em;
+    height: 1.5em;
     background: conic-gradient(from 180deg at 50% 50%, #fff -90.37deg, var(--clr-primary) 0.54deg, #dcdcdc 91.28deg, #fff 269.63deg, var(--clr-primary) 360.54deg);
     box-shadow: inset -1px 1px 4px 3px #fff;
     border-radius: 50%;
@@ -169,7 +168,7 @@ canvas {
 
 .fas {
     color: var(--clr-dark-shadow);
-    font-size: 0.3em;
+    font-size: 5px;
 }
 
 .selection {
@@ -180,7 +179,6 @@ canvas {
 
 .penColour {
     padding: 1em;
-    margin-right: 1em;
 }  
 
 select {
@@ -202,7 +200,7 @@ option, label {
     display: flex;
     justify-content: center;
     width: min(30vw, 4em);
-    padding: 0.3em;
+    padding: 0.2em;
     background: linear-gradient(var(--clr-secondary), var(--clr-light-red), var(--clr-secondary));
     border: 0.2em solid var(--clr-secondary);
     border-radius: 0.4em;
@@ -286,23 +284,23 @@ option, label {
         height: 3.125em;
     }
     .sketch__btn a {
-        margin: -0.1em 0.4em 0.1em 0.4em;
+        margin: -0.1em 0.4em 0.2em 0.4em;
     }
     .horizontal__dial {
         box-shadow: 0.5em -0.5em  0.75em 0 rgba(0, 0, 0, 0.3),
                     -0.625em 0.625em 1em rgba(0, 0, 0, 0.25),
-                    0.15em -0.15em 0.06em var(--clr-primary);
-        margin-left: -2.3em;
+                    0.12em -0.12em 0.06em var(--clr-primary);
+        margin-left: -2.4em;
     }
     .vertical__dial {
         box-shadow: -0.5em 0.5em 0.75em 0 rgba(0, 0, 0, 0.3),
                     0.625em -0.625em 1em rgba(0, 0, 0, 0.25),
-                    -0.15em 0.15em 0.06em var(--clr-primary);
-        margin-right: -2.3em;
+                    -0.12em 0.12em 0.06em var(--clr-primary);
+        margin-right: -2.4em;
     }
     .dial {
-        width: 2.3em;
-        height: 2.3em;
+        width: 2.375em;
+        height: 2.375em;
     }
     .fas {
         font-size: 0.625em;
@@ -313,6 +311,7 @@ option, label {
     }
     .erase {
         width: min(40vw, 5em);
+        padding: 0.3em;
     }
     .footer {
         font-size: 0.9em;
@@ -326,6 +325,7 @@ option, label {
 @media screen and (min-width: 48em) {
     .sketch__container {
         border-width: 4.5em;
+        margin: 1em;
     }
     .sketch__container::after {
         top: -4.5em;
@@ -343,6 +343,10 @@ option, label {
     .sketch__header span {
         font-size: 0.7em;
     }
+    .sketch__frame {
+        box-shadow: inset 0.1em 0.1em 0.4em rgba(0, 0, 0, 0.521), 
+                inset -0.1em -0.1em 0.4em rgba(0, 0, 0, 0.521);
+    }
     .sketch__canvas {
         width: 600px;
         height: 400px;
@@ -355,7 +359,7 @@ option, label {
         height: 4.55em;
     }
     .sketch__btn a {
-        margin: 0.1em 0.6em;
+        margin: 0.1em 0.6em 0.3em 0.6em;
     }
     .horizontal__dial{
         box-shadow: 0.6em -0.6em  0.85em 0 rgba(0, 0, 0, 0.3),
@@ -370,8 +374,8 @@ option, label {
         margin-right: -3.5em;
     }
     .dial {
-        width: 3.4em;
-        height: 3.4em;
+        width: 3.55em;
+        height: 3.55em;
     }
     .fas {
         font-size: 0.8em;
@@ -382,6 +386,7 @@ option, label {
     }
     .erase {
         width: min(50vw, 6em);
+        padding: 0.4em;
     }
     .footer {
         font-size: 0.975em;
