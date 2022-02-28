@@ -135,8 +135,9 @@ const play = () => {
 }
 
 // erase colour
-function eraseColour() {
+function eraseColour(e) {
     container.classList.add('shake-it');
+    e.preventDefault();
     container.addEventListener('animationend', () => {
         ctx.clearRect(0, 0, width, height);
         showCanvas();
