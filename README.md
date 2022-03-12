@@ -12,10 +12,10 @@ Also in this project:
 - Added two options named black and colourful within pen colour
 
 #### Resources: 
-- [The Odin Project](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project)
+- [The Odin Project: Etch-a-Sketch](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project)
 - [Etch-a-Sketch](https://wesbos.com/javascript/06-serious-practice-exercises/etch-a-sketch) by Wes Bos
-- [Drawing on Canvas](https://eloquentjavascript.net/17_canvas.html)
+- [Drawing on Canvas](https://eloquentjavascript.net/17_canvas.html)- Eloquent JavaScript
 
 
 
-Live preview: [Etch-a-Sketch](https://cansubaydar.github.io/etch_a_sketch/)
+Live preview is [here](https://cansubaydar.github.io/etch_a_sketch/)
